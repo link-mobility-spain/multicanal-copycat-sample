@@ -44,7 +44,9 @@ namespace Link.Multicanal.WorkerService
                     services.AddSingleton(appConfig);
 
                     services.AddTransient<Link.Multicanal.API.Multicanal.WebService.ServidorSms.AddServicePortTypeClient, Link.Multicanal.API.Multicanal.WebService.ServidorSms.AddServicePortTypeClient>();
+                    services.AddTransient<Link.Multicanal.API.Multicanal.WebService.Servidor.AddServicePortTypeClient, Link.Multicanal.API.Multicanal.WebService.Servidor.AddServicePortTypeClient>();
                     services.AddTransient<Link.Multicanal.API.ServidorSmsService, Link.Multicanal.API.ServidorSmsService>();
+                    services.AddTransient<Link.Multicanal.API.ServidorService, Link.Multicanal.API.ServidorService>();
                     services.AddTransient<Service.AppService, Service.AppService>();
 
                     services.AddHostedService<Worker>();
